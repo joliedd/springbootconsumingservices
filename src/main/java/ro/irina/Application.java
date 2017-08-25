@@ -7,7 +7,6 @@ import org.springframework.context.ApplicationContext;
 
 import java.util.Arrays;
 
-
 @SpringBootApplication
 @EnableCaching
 public class Application {

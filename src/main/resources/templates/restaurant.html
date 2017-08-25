@@ -28,6 +28,44 @@
                 <td colspan="3" th:text="MENU">menu</td>
 
             </tr>
+            <tr >
+
+                <td colspan="3">
+
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Category</th>
+                            <th>Name</th>
+                            <th>Topping</th>
+                            <th>Price</th>
+                            <th>Rank</th>
+                        </tr>
+                        <tr th:each="menuItem : ${menu}">
+
+                            <td th:text="${menuItem.id}">id</td>
+                            <td th:text="${menuItem.category}">category</td>
+                            <td th:text="${menuItem.name}">name</td>
+
+                            <td>
+                                <table>
+                                    <tr th:each="top : ${menuItem.topping}">
+                                        <td th:text="${top}">id</td>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td th:text="${menuItem.price}">price</td>
+                            <td th:text="${menuItem.rank}">rank</td>
+
+                        </tr>
+
+                    </table>
+
+                </td>
+
+            </tr>
+
         </table>
 
     </body>

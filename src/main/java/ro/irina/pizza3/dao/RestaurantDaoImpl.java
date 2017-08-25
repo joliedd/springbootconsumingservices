@@ -115,7 +115,7 @@ public class RestaurantDaoImpl implements RestaurantDao {
     public Restaurant getClosestRestaurant(GeoPoint location) throws Exception {
 
 		if(location == null){
-           throw new IllegalArgumentException(" GeoPoint id is null ");
+			throw new IllegalArgumentException(" GeoPoint id is null ");
 		}
 
         List<Restaurant> restaurants = null;
@@ -127,11 +127,11 @@ public class RestaurantDaoImpl implements RestaurantDao {
         double max = 999999999;
 		Restaurant closestRestaurant=null;
 		for (Restaurant restaurant:restaurants){
-           double distance = RestaurantUtils.calculateDistance(location.getLatitude(),location.getLongitude(),restaurant.getLatitude(),restaurant.getLongitude());
-           if(distance < max){
-               max  = distance;
-               closestRestaurant = restaurant;
-           }
+			double distance = RestaurantUtils.calculateDistance(location.getLatitude(),location.getLongitude(),restaurant.getLatitude(),restaurant.getLongitude());
+			if(distance < max){
+				max  = distance;
+				closestRestaurant = restaurant;
+			}
        }
 
        return closestRestaurant;

@@ -76,7 +76,6 @@ class RestaurantController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        log.info("closest restaurant id:" + restaurant.getId());
         return new RedirectView("/restaurants/id/"+restaurant.getId());
     }
 
@@ -100,7 +99,7 @@ class RestaurantController {
 
 
     @RequestMapping(value = "/api/v1/restaurants/closest", method = RequestMethod.GET,  produces = "application/json")
-    public  Restaurant  getClosestRestaurant() throws Exception {
+    public Restaurant  getClosestRestaurant() throws Exception {
         /*  i can do geolocation too but in the next version of the app since it takes some time
 		*/
         GeoPoint location = new GeoPoint(45.66,41.33);

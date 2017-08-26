@@ -6,7 +6,7 @@ Spring Boot Java 8 webservice with Gradle for a pizaa application
 ## Display in HTML page the list of restaurants and links to the closest restaurant and restaurants details
 /index
 
-## Display in HTML page restaurant's details by ID
+## Display in HTML page restaurant's details by ID and Menu
 /restaurants/id/1
 
 ## Display in HTML page closest restaurant's details

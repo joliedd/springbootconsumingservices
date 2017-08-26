@@ -9,7 +9,7 @@ Spring Boot Java 8 webservice with Gradle for a pizaa application
 ## Display in HTML page restaurant's details by ID and Menu
 /restaurants/id/1
 
-## Display in HTML page closest restaurant's details
+## Display in HTML page closest restaurant's details and Menu
 /restaurants/closest
 
 ## Display in JSON format the list of restaurants

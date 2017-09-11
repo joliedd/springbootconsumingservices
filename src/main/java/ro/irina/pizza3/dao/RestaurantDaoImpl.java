@@ -112,30 +112,6 @@ public class RestaurantDaoImpl implements RestaurantDao {
         return Arrays.asList(menuItems);
     }
 
-    public Restaurant getClosestRestaurant(GeoPoint location) throws Exception {
-
-		if(location == null){
-			throw new IllegalArgumentException(" GeoPoint id is null ");
-		}
-
-        List<Restaurant> restaurants = null;
-        try {
-            restaurants = this.getAllRestaurants();
-        } catch (Exception e) {
-            throw new Exception("Back end service response not successfull for getAllRestaurants");
-        }
-        double max = 999999999;
-		Restaurant closestRestaurant=null;
-		for (Restaurant restaurant:restaurants){
-			double distance = RestaurantUtils.calculateDistance(location.getLatitude(),location.getLongitude(),restaurant.getLatitude(),restaurant.getLongitude());
-			if(distance < max){
-				max  = distance;
-				closestRestaurant = restaurant;
-			}
-       }
-
-       return closestRestaurant;
-    }
 
 
 

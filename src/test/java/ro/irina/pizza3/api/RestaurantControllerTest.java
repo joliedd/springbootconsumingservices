@@ -47,12 +47,5 @@ public class RestaurantControllerTest {
         Assert.assertNotNull(result.getModelAndView().getModel().get("restaurants"));
     }
 
-     @Test
-    public void getAllRestaurantsTest() throws Exception {
 
-        this.mockMvc.perform(get("/api/v1/restaurants/all")
-                .accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE));
-    }
 }
